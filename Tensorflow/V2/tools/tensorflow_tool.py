@@ -67,7 +67,7 @@ def predict_model(test_iter,net,TYPE='iter'):
         # 这⾥的_表示我们忽略（不使⽤）的变量
         _, figs = plt.subplots(1, len(images), figsize=(12, 12)) # 这里注意subplot 和subplots 的区别
         for f, img, lbl in zip(figs, images, labels):
-            f.imshow(tf.reshape(img, shape=(28, 28)).numpy())
+            f.imshow(tf.reshape(img, shape=(images.shape[1], images.shape[2])).numpy())
             f.set_title(lbl)
             f.axes.get_xaxis().set_visible(False)
             f.axes.get_yaxis().set_visible(False)
