@@ -14,6 +14,7 @@ class INIT(object):
 
         self.input_length=28#输入图片的长
         self.input_width=28#输入图片的宽
+        self.num_inputs=self.input_width*self.input_length
         self.num_outputs=10#输出结果类别
         self.num_epochs=5#训练次数
         self.lr =  0.1#学习率
