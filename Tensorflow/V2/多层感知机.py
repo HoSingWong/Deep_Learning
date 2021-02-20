@@ -51,7 +51,6 @@ class ZERO(INIT):
 
     def output(self):
         #定义模型参数
-        self.num_inputs=self.input_length*self.input_width
         self.W1 = tf.Variable(tf.random.normal(shape=(self.num_inputs, self.num_hiddens), mean=0, stddev=0.01, dtype=tf.float32))
         self.b1 = tf.Variable(tf.zeros(self.num_hiddens, dtype=tf.float32))
         self.W2 = tf.Variable(tf.random.normal(shape=(self.num_hiddens, self.num_outputs), mean=0, stddev=0.01, dtype=tf.float32))
